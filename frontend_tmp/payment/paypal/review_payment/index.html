@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Payment</title>
+</head>
+<body>
+    <h1>Review Payment</h1>
+    <div>
+        <table id="cart_item_container">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Short description</th>
+                    <th>Description</th>
+                    <th>Picture</th>
+                    <th>Preview</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody id="cart_item_container_body">
+
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <label><strong>Total: <span id="total">123</span></strong></label>
+    </div>
+    <br>
+    <h3>Action</h3>
+    <div>
+        <button onclick="purchase();">Purchase</button>
+        <button onclick="removeFromCart();">Remove from cart</button>
+    </div>
+    
+</body>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid;
+        padding: 10px;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="../../../base.js"></script>
+<script src="main.js"></script>
+</html>

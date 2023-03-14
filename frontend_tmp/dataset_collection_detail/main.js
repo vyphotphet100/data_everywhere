@@ -62,6 +62,11 @@ function seePreview() {
 }
 
 function addToCart() {
+    if (user == null) {
+        alert("You need to log in to do this action");
+        return;
+    }
+
     $.ajax({
         url: Base.baseUrl + '/api/cart_item/add',
         type: 'POST',

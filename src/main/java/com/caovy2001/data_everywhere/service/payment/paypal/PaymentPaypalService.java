@@ -18,10 +18,13 @@ import com.caovy2001.data_everywhere.service.dataset_collection.IDatasetCollecti
 import com.caovy2001.data_everywhere.service.jedis.IJedisService;
 import com.caovy2001.data_everywhere.service.payment_method.IPaymentMethodService;
 import com.caovy2001.data_everywhere.service.transaction.ITransactionService;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.paypal.api.payments.*;
 import com.paypal.base.rest.APIContext;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -33,6 +36,7 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicReference;
 
+@Slf4j
 @Component
 public class PaymentPaypalService extends BaseService implements IPaymentPaypalServiceAPI, IPaymentPaypalService {
     @Autowired
@@ -89,8 +93,8 @@ public class PaymentPaypalService extends BaseService implements IPaymentPaypalS
 
         //region Set redirect url
         RedirectUrls redirectUrls = new RedirectUrls();
-        redirectUrls.setCancelUrl("http://127.0.0.1:5500/payment/paypal/cancel");
-        redirectUrls.setReturnUrl("http://127.0.0.1:5500/payment/paypal/review_payment");
+        redirectUrls.setCancelUrl(Constant.Paypal.cancelUrl);
+        redirectUrls.setReturnUrl(Constant.Paypal.returnUrl);
         //endregion
 
         //region Create transaction
@@ -149,31 +153,7 @@ public class PaymentPaypalService extends BaseService implements IPaymentPaypalS
             throw new Exception(ExceptionConstant.missing_param);
         }
 
-        String paymentJedisKey = Constant.JedisPrefix.userIdPrefix_ + command.getUserId() +
-                Constant.JedisPrefix.COLON +
-                Constant.JedisPrefix.Paypal.paymentIdPrefix_ + command.getPaymentId();
-        String paymentJedisValueStr = jedisService.get(paymentJedisKey);
-        if (StringUtils.isBlank(paymentJedisValueStr)) {
-            throw new Exception("payment_null");
-        }
-
-        Map<String, Object> paymentJedisValue = objectMapper.readValue(paymentJedisValueStr, Map.class);
-        if (paymentJedisValue == null ||
-                paymentJedisValue.isEmpty() ||
-                paymentJedisValue.get("cartItemIds") == null) {
-            throw new Exception("payment_process_fail");
-        }
-
-        List<String> cartItemIds = objectMapper.convertValue(paymentJedisValue.get("cartItemIds"), List.class);
-        if (cartItemIds == null || CollectionUtils.isEmpty(cartItemIds)) {
-            throw new Exception("payment_process_fail");
-        }
-
-        List<CartItemEntity> cartItemEntities = cartItemService.getList(CommandGetListCartItem.builder()
-                .userId(command.getUserId())
-                .ids(cartItemIds)
-                .purchased(false)
-                .build());
+        List<CartItemEntity> cartItemEntities = this.getCartItemsByPaymentId(command.getUserId(), command.getPaymentId());
         if (CollectionUtils.isEmpty(cartItemEntities)) {
             throw new Exception("payment_process_fail");
         }
@@ -217,6 +197,69 @@ public class PaymentPaypalService extends BaseService implements IPaymentPaypalS
                 .cartItems(cartItemEntities)
                 .build();
     }
+
+    @Override
+    public List<CartItemEntity> getCartItemsByPaymentIdForAPI(String userId, String paymentId) throws Exception {
+        List<CartItemEntity> cartItemEntities = this.getCartItemsByPaymentId(userId, paymentId);
+        if (CollectionUtils.isEmpty(cartItemEntities)) {
+            throw new Exception("cart_items_empty");
+        }
+
+        // set data collection cho từng cart item
+        for (CartItemEntity cartItemEntity: cartItemEntities) {
+            cartItemEntity.setDatasetCollection(datasetCollectionService.getById(cartItemEntity.getDatasetCollectionId()));
+        }
+
+        return cartItemEntities;
+    }
+
+    private List<CartItemEntity> getCartItemsByPaymentId(String userId, String paymentId) {
+        if (StringUtils.isAnyBlank(userId, paymentId)) {
+            return null;
+        }
+
+        String paymentJedisKey = Constant.JedisPrefix.userIdPrefix_ + userId +
+                Constant.JedisPrefix.COLON +
+                Constant.JedisPrefix.Paypal.paymentIdPrefix_ + paymentId;
+        String paymentJedisValueStr = jedisService.get(paymentJedisKey);
+        if (StringUtils.isBlank(paymentJedisValueStr)) {
+            log.error("[getCartItemsByPaymentId]: payment_null");
+            return null;
+        }
+
+        Map<String, Object> paymentJedisValue = null;
+        try {
+            paymentJedisValue = objectMapper.readValue(paymentJedisValueStr, Map.class);
+            if (paymentJedisValue == null ||
+                    paymentJedisValue.isEmpty() ||
+                    paymentJedisValue.get("cartItemIds") == null) {
+                log.error("[getCartItemsByPaymentId]: payment_null");
+                return null;
+            }
+        } catch (JsonProcessingException e) {
+            log.error("[getCartItemsByPaymentId]: cannot_parse_payment");
+            return null;
+        }
+
+        List<String> cartItemIds = objectMapper.convertValue(paymentJedisValue.get("cartItemIds"), List.class);
+        if (cartItemIds == null || CollectionUtils.isEmpty(cartItemIds)) {
+            log.error("[getCartItemsByPaymentId]: cannot_parse_cartItemIds");
+            return null;
+        }
+
+        List<CartItemEntity> cartItemEntities = cartItemService.getList(CommandGetListCartItem.builder()
+                .userId(userId)
+                .ids(cartItemIds)
+                .purchased(false)
+                .build());
+        if (CollectionUtils.isEmpty(cartItemEntities)) {
+            log.error("[getCartItemsByPaymentId]: cartItemIds_empty");
+            return null;
+        }
+
+        return cartItemEntities;
+    }
+
 }
 
 

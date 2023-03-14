@@ -9,6 +9,9 @@ public class Constant {
         public static final String CLIENT_ID = "Ach_PbGhn-5RR7F6KTqvSgAxvp4stM-xwXqFDl0-CAH-J3cTpRnUbyohkCbXpqAK1sIXiX-wTh80hTWw";
         public static final String CLIENT_SECRET = "EPWGV_lcw-DsRUn1aIalk_tPtaIFvv1_j_qeXj0oMCzS1gM-0gnmsvVdMbq6UqXhaprtIvlNwr3xQ0Ss";
         public static final String MODE = "sandbox";
+        public static final String cancelUrl = "http://127.0.0.1:5500/payment/paypal/cancel/index.html";
+        public static final String returnUrl = "http://127.0.0.1:5500/payment/paypal/review_payment/index.html";
+
     }
 
     public static class JedisPrefix {

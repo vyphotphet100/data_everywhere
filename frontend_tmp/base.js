@@ -21,7 +21,7 @@ class Base {
                 return c.substring(name.length, c.length);
             }
         }
-        return "";
+        return null;
     }
 
     static getAllUrlParams(url) {
@@ -49,8 +49,8 @@ class Base {
                 var paramValue = typeof (a[1]) === 'undefined' ? true : a[1];
     
                 // (optional) keep case consistent
-                paramName = paramName.toLowerCase();
-                if (typeof paramValue === 'string') paramValue = paramValue.toLowerCase();
+                // paramName = paramName.toLowerCase();
+                // if (typeof paramValue === 'string') paramValue = paramValue.toLowerCase();
     
                 // if the paramName ends with square brackets, e.g. colors[] or colors[2]
                 if (paramName.match(/\[(\d+)?\]$/)) {
