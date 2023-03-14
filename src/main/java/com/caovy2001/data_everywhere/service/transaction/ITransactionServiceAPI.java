@@ -1,0 +1,6 @@
+package com.caovy2001.data_everywhere.service.transaction;
+
+import com.caovy2001.data_everywhere.service.IBaseService;
+
+public interface ITransactionServiceAPI extends IBaseService {
+}
