@@ -14,7 +14,7 @@ public class CommandUpdateUserDetail {
     private String fullName;
     private String birthday;
     private String address;
-    private String oldPassword;
+    private String currentPassword;
     private String newPassword;
     private String confirmPassword;
 }

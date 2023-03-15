@@ -104,7 +104,7 @@ public class UserService extends BaseService implements IUserService, IUserServi
 
     @Override
     public UserEntity updatePassword(CommandUpdateUserDetail command) throws Exception {
-        if (StringUtils.isAnyBlank(command.getUserId(), command.getOldPassword(), command.getNewPassword(), command.getConfirmPassword())) {
+        if (StringUtils.isAnyBlank(command.getUserId(), command.getCurrentPassword(), command.getNewPassword(), command.getConfirmPassword())) {
             throw new Exception(ExceptionConstant.missing_param);
         }
 
@@ -113,11 +113,11 @@ public class UserService extends BaseService implements IUserService, IUserServi
             throw new Exception("user_not_exist");
         }
 
-        if (!command.getOldPassword().equals(userEntity.getPassword())) {
+        if (!command.getCurrentPassword().equals(userEntity.getPassword())) {
             throw new Exception("old_password_wrong");
         }
 
-        if (command.getOldPassword().equals(command.getNewPassword())) {
+        if (command.getCurrentPassword().equals(command.getNewPassword())) {
             throw new Exception("old_password_equal_new_password");
         }
 

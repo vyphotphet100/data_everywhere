@@ -85,6 +85,56 @@ function getCartItemsSuccess(result) {
     $("#total").html(total);
 }
 
+function pay() {
+    var paymentId = Base.getAllUrlParams().paymentId;
+    var PayerID = Base.getAllUrlParams().PayerID;
+
+    if (paymentId == null || PayerID == null) {
+        alert("Missing param!");
+        return;
+    }
+
+    $("#loading")[0].style = "display: block;";
+
+    $.ajax({
+        url: Base.baseUrl + '/api/payment/paypal/execute_payment',
+        type: 'POST',
+        async: true,
+        headers: {
+            "Authorization": "Token " + token
+        },
+        data: JSON.stringify({
+            "payment_id": paymentId,
+            "payer_id": PayerID
+        }),
+        contentType: 'application/json',
+        dataType: 'json',
+        success: function(result) {
+            if (result == null || result.status == null || result.status.http_status == null) {
+                alert("Something went wrong: " + JSON.stringify(result));
+                return;
+            }
+
+            if (result.status.http_status != "OK") {
+                alert("Login failed: " + result.status.exception_code);
+                return;
+            }
+
+            paySuccess(result);
+            return result;
+        }
+    });
+}
+
+function paySuccess(result) {
+    if (result == null || result.payload == null || result.payload.transaction == null) {
+        return;
+    }
+
+    alert("Pay successfully!");
+    window.location.href = Base.originUrl + "/dashboard/";
+}
+
 
 
 

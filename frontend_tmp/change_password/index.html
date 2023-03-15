@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change password</title>
+</head>
+<body>
+    <h1>Change password</h1>
+    <div>
+        <label>Current password: </label>
+        <input id="current_password" value="">
+    </div>
+    <div>
+        <label>New password: </label>
+        <input id="new_password" value="">
+    </div>
+    <div>
+        <label>Confirm password: </label>
+        <input id="confirm_password" value="">
+    </div>
+    <div>
+        <button onclick="save();" id="save">Save</button>
+    </div>
+    <div>
+        <img id="loading" style="display: none;" src="../loading.webp">
+    </div>
+    
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="../base.js"></script>
+<script src="main.js"></script>
+</html>

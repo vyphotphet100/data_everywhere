@@ -1,5 +1,6 @@
 package com.caovy2001.data_everywhere.command.cart_item;
 
+import com.caovy2001.data_everywhere.model.Sort;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -24,4 +25,17 @@ public class CommandGetListCartItem {
 
     @Builder.Default
     private boolean hasDatasetCollection = false;
+
+    private Sort sort;
 }
+
+
+
+
+
+
+
+
+
+
+

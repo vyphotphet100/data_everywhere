@@ -4,6 +4,7 @@ import com.caovy2001.data_everywhere.command.cart.CommandAddCart;
 import com.caovy2001.data_everywhere.command.cart.CommandUpdateCart;
 import com.caovy2001.data_everywhere.command.cart_item.CommandAPIAddCartItem;
 import com.caovy2001.data_everywhere.command.cart_item.CommandGetListCartItem;
+import com.caovy2001.data_everywhere.command.cart_item.CommandRemoveCartItem;
 import com.caovy2001.data_everywhere.command.dataset_collection.CommandGetListDatasetCollection;
 import com.caovy2001.data_everywhere.constant.ExceptionConstant;
 import com.caovy2001.data_everywhere.entity.CartEntity;
@@ -21,6 +22,7 @@ import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -110,10 +112,34 @@ public class CartItemService extends BaseService implements ICartItemServiceAPI,
             return new Paginated<>(new ArrayList<>(), command.getPage(), command.getSize(), 0);
         }
 
-        query.with(PageRequest.of(command.getPage() - 1, command.getSize()));
+        PageRequest pageRequest = PageRequest.of(command.getPage() - 1, command.getSize());
+        if (command.getSort() != null && command.getSort().getDirection() != null) {
+            pageRequest = pageRequest.withSort(Sort.by(command.getSort().getDirection(), command.getSort().getField()));
+        }
+        query.with(pageRequest);
         List<CartItemEntity> cartItemEntities = mongoTemplate.find(query, CartItemEntity.class);
         this.setViewForPaginatedList(cartItemEntities, command);
         return new Paginated<>(cartItemEntities, command.getPage(), command.getSize(), total);
+    }
+
+    @Override
+    public boolean removeCartItem(@NonNull CommandRemoveCartItem command) throws Exception {
+        if (StringUtils.isBlank(command.getUserId()) || CollectionUtils.isEmpty(command.getCartItemIds())) {
+            throw new Exception(ExceptionConstant.missing_param);
+        }
+
+        List<CartItemEntity> cartItemEntities = this.getList(CommandGetListCartItem.builder()
+                .userId(command.getUserId())
+                .purchased(false)
+                .ids(command.getCartItemIds())
+                .build());
+
+        if (CollectionUtils.isEmpty(cartItemEntities)) {
+            throw new Exception("cart_item_not_exist");
+        }
+
+        cartItemRepository.deleteAllById(cartItemEntities.stream().map(CartItemEntity::getId).toList());
+        return true;
     }
 
     private void setViewForPaginatedList(List<CartItemEntity> cartItemEntities, CommandGetListCartItem command) {
@@ -125,7 +151,7 @@ public class CartItemService extends BaseService implements ICartItemServiceAPI,
             return;
         }
 
-        for (CartItemEntity cartItemEntity: cartItemEntities) {
+        for (CartItemEntity cartItemEntity : cartItemEntities) {
             if (BooleanUtils.isTrue(command.isHasDatasetCollection())) {
                 cartItemEntity.setDatasetCollection(datasetCollectionService.getById(cartItemEntity.getDatasetCollectionId()));
             }
@@ -194,6 +220,10 @@ public class CartItemService extends BaseService implements ICartItemServiceAPI,
         Query query = this.buildQueryGetList(command);
         if (query == null) {
             return null;
+        }
+
+        if (command.getSort() != null && command.getSort().getDirection() != null) {
+            query.with(Sort.by(command.getSort().getDirection(), command.getSort().getField()));
         }
 
         return mongoTemplate.find(query, CartItemEntity.class);

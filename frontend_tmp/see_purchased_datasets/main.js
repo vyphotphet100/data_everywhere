@@ -26,7 +26,6 @@ var cartItemColumnStr = `
     <td>__picture__</td>
     <td>__preview__</td>
     <td>__amount__</td>
-    <td><input type="checkbox" id="checkbox___cart_item_id__" onchange="updateListCartItemIdToDoAction();"></td>
 </tr>
 `;
 
@@ -34,7 +33,7 @@ var command = {
     "page" : 1,
     "size": 5,
     "has_dataset_collection": true,
-    "purchased": false,
+    "purchased": true,
     "sort": {
         "field": "id",
         "direction": "DESC"
@@ -140,107 +139,3 @@ function searchByKeyword() {
     $("#page").html(command.page);
     this.getPaginatedCartItemList(command);
 }
-
-
-var cartItemIds = [];
-function updateListCartItemIdToDoAction() {
-    cartItemIds = [];
-    for (var i=0; i<originCartItemIds.length; i++) {
-        if ($("#checkbox_" + originCartItemIds[i])[0].checked) {
-            cartItemIds.push(originCartItemIds[i]);
-        }
-    }
-}
-
-function purchase() {
-    if (cartItemIds.length == 0) {
-        alert("Nothing to purchase!");
-        return;
-    }
-
-    $("#loading")[0].style = "display: block;";
-
-    $.ajax({
-        url: Base.baseUrl + '/api/payment/paypal/authorize_payment',
-        type: 'POST',
-        async: true,
-        contentType: 'application/json',
-        headers: {
-            "Authorization": "Token " + token
-        },
-        data: JSON.stringify({
-            "cart_item_ids": cartItemIds
-        }),
-        dataType: 'json',
-        success: function(result) {
-            if (result == null || result.status == null || result.status.http_status == null) {
-                alert("Something went wrong: " + JSON.stringify(result));
-                return;
-            }
-
-            if (result.status.http_status != "OK") {
-                alert("Failed: " + result.status.exception_code);
-                return;
-            }
-
-            purchaseSuccess(result);
-            return result;
-        }
-    });
-}
-
-function purchaseSuccess(result) {
-    if (result.payload == null || result.payload.approval_link == null) {
-        return;
-    }
-
-    window.location.href = result.payload.approval_link;
-}
-
-function removeFromCart() {
-    if (cartItemIds.length == 0) {
-        alert("Nothing to remove!");
-        return;
-    }
-    
-    $("#loading")[0].style = "display: block;";
-
-    $.ajax({
-        url: Base.baseUrl + '/api/cart_item/remove',
-        type: 'POST',
-        async: true,
-        contentType: 'application/json',
-        headers: {
-            "Authorization": "Token " + token
-        },
-        data: JSON.stringify({
-            "cart_item_ids": cartItemIds
-        }),
-        dataType: 'json',
-        success: function(result) {
-            if (result == null || result.status == null || result.status.http_status == null) {
-                alert("Something went wrong: " + JSON.stringify(result));
-                return;
-            }
-
-            if (result.status.http_status != "OK") {
-                alert("Failed: " + result.status.exception_code);
-                return;
-            }
-
-            removeFromCartSuccess(result);
-            return result;
-        }
-    });
-}
-
-function removeFromCartSuccess(result) {
-    if (result == null || result.payload == null || result.payload == false) {
-        return;
-    }
-
-    alert("Remove successfully!");
-    window.location.reload();
-}
-
-

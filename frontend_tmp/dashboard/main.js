@@ -8,6 +8,9 @@ if (Base.getCookie("user") != null) {
 }
 
 if (user != null) {
-    $("#log_in_btn").remove()
-    $("#sign_up_btn").remove()
+    $("#log_in_btn").remove();
+    $("#sign_up_btn").remove();
+} else {
+    $("#see_purchased_dataset").remove();
+    $("#edit_user_details").remove();
 }

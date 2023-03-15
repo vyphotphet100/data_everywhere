@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit information</title>
+</head>
+<body>
+    <h1>Edit information</h1>
+    <div>
+        <div>
+            <label>Full name: </label>
+            <input id="full_name" value="">
+        </div>
+        <br>
+        <div>
+            <label>Birthday: </label>
+            <input id="birthday" value="">
+        </div>
+        <br>
+        <div>
+            <label>Address: </label>
+            <input id="address" value="">
+        </div>
+        <br>
+        <div>
+            <label>Password: </label>
+            <input id="password" value="********" disabled>
+            <button onclick="changePassword();" id="change_password_btn">Change password</button>
+        </div>
+        <br>
+        <div>
+            <button onclick="save();" id="save">Save</button>
+        </div>
+        <div>
+            <img id="loading" style="display: none;" src="../loading.webp">
+        </div>
+    </div>
+    
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="../base.js"></script>
+<script src="main.js"></script>
+</html>

@@ -2,6 +2,7 @@ package com.caovy2001.data_everywhere.api;
 
 import com.caovy2001.data_everywhere.command.cart_item.CommandAPIAddCartItem;
 import com.caovy2001.data_everywhere.command.cart_item.CommandGetListCartItem;
+import com.caovy2001.data_everywhere.command.cart_item.CommandRemoveCartItem;
 import com.caovy2001.data_everywhere.constant.ExceptionConstant;
 import com.caovy2001.data_everywhere.entity.UserEntity;
 import com.caovy2001.data_everywhere.model.ResponseModel;
@@ -30,6 +31,31 @@ public class CartItemAPI extends BaseAPI {
             command.setUserId(userEntity.getId());
             return ResponseModel.builder()
                     .payload(cartItemServiceAPI.addCartItem(command))
+                    .status(ResponseModel.Status.builder().build())
+                    .build();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseModel.builder()
+                    .status(ResponseModel.Status.builder()
+                            .httpStatus(HttpStatus.EXPECTATION_FAILED)
+                            .exceptionCode(StringUtils.isNotBlank(e.getMessage())? e.getMessage(): ExceptionConstant.error_occur)
+                            .build())
+                    .build();
+        }
+    }
+
+    @PostMapping("/remove")
+    @PreAuthorize("hasAnyAuthority('USER')")
+    public ResponseModel removeCartItem(@RequestBody CommandRemoveCartItem command) {
+        try {
+            UserEntity userEntity = this.getUser();
+            if (userEntity == null || StringUtils.isBlank(userEntity.getId())) {
+                throw new Exception(ExceptionConstant.auth_invalid);
+            }
+
+            command.setUserId(userEntity.getId());
+            return ResponseModel.builder()
+                    .payload(cartItemServiceAPI.removeCartItem(command))
                     .status(ResponseModel.Status.builder().build())
                     .build();
         } catch (Exception e) {

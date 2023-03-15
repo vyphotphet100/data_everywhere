@@ -20,12 +20,34 @@
     <br>
     <div>
         <button onclick="seePreview();">See preview</button>
-        <button onclick="addToCart();">Add to cart</button>
+        <button id="add_to_cart_btn" onclick="addToCart();">Add to cart</button>
+    </div>
+    <br>
+    <div>
+        <table id="dataset_item_container">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Path</th>
+                </tr>
+            </thead>
+            <tbody id="dataset_item_container_body">
+
+            </tbody>
+        </table>
     </div>
 
     
 </body>
-
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid;
+        padding: 10px;
+    }
+</style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script src="../base.js"></script>
 <script src="main.js"></script>
