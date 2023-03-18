@@ -1,5 +1,5 @@
 class Base {
-    static baseUrl = "http://127.0.0.1:8080";
+    static baseUrl = "http://103.200.20.180:8086";
     static originUrl = "http://127.0.0.1:5500"
 
     static setCookie(cname, cvalue, exMinutes) {
