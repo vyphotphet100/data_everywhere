@@ -13,4 +13,10 @@ if (user != null) {
 } else {
     $("#see_purchased_dataset").remove();
     $("#edit_user_details").remove();
+    $("#log_out_btn").remove();
+}
+
+function logOut() {
+    Base.setCookie("user", null, 0);
+    window.location.href = Base.originUrl + "/log_in/index.html";
 }

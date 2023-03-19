@@ -2,6 +2,7 @@ package com.caovy2001.data_everywhere.service.user;
 
 import com.caovy2001.data_everywhere.command.user.CommandAPIUserLogIn;
 import com.caovy2001.data_everywhere.command.user.CommandAPIUserSignUp;
+import com.caovy2001.data_everywhere.command.user.CommandLoginFromThirdPartyResponse;
 import com.caovy2001.data_everywhere.command.user.CommandUpdateUserDetail;
 import com.caovy2001.data_everywhere.entity.UserEntity;
 import com.caovy2001.data_everywhere.service.IBaseService;
@@ -14,4 +15,6 @@ public interface IUserServiceAPI extends IBaseService {
     UserEntity update(CommandUpdateUserDetail command) throws Exception;
 
     UserEntity updatePassword(CommandUpdateUserDetail command) throws Exception;
+
+    boolean logInFromThirdParty(CommandLoginFromThirdPartyResponse command) throws Exception;
 }

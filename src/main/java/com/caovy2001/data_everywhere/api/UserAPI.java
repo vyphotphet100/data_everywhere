@@ -2,6 +2,7 @@ package com.caovy2001.data_everywhere.api;
 
 import com.caovy2001.data_everywhere.command.user.CommandAPIUserLogIn;
 import com.caovy2001.data_everywhere.command.user.CommandAPIUserSignUp;
+import com.caovy2001.data_everywhere.command.user.CommandLoginFromThirdPartyResponse;
 import com.caovy2001.data_everywhere.command.user.CommandUpdateUserDetail;
 import com.caovy2001.data_everywhere.constant.ExceptionConstant;
 import com.caovy2001.data_everywhere.entity.UserEntity;
@@ -26,6 +27,24 @@ public class UserAPI extends BaseAPI {
             UserEntity userEntity = userServiceAPI.logIn(command);
             return ResponseModel.builder()
                     .payload(userEntity)
+                    .status(ResponseModel.Status.builder().build())
+                    .build();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseModel.builder()
+                    .status(ResponseModel.Status.builder()
+                            .httpStatus(HttpStatus.EXPECTATION_FAILED)
+                            .exceptionCode(StringUtils.isNotBlank(e.getMessage())? e.getMessage(): ExceptionConstant.error_occur)
+                            .build())
+                    .build();
+        }
+    }
+
+    @PostMapping("/log_in_from_third_party")
+    public ResponseModel logInFromThirdParty(@RequestBody CommandLoginFromThirdPartyResponse command) {
+        try {
+            return ResponseModel.builder()
+                    .payload(userServiceAPI.logInFromThirdParty(command))
                     .status(ResponseModel.Status.builder().build())
                     .build();
         } catch (Exception e) {

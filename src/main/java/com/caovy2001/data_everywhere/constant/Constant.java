@@ -24,4 +24,8 @@ public class Constant {
 
     }
 
+    public static class SecretLoginKey {
+        public static String CHATBOT = "CHATBOT_wr0gnmsvVdMprt3xQ0SsIvlNbq6UqXha";
+    }
+
 }
