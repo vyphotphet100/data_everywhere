@@ -11,12 +11,15 @@ public class JedisService extends BaseService implements IJedisService {
     @Override
     public String get(String key) {
         Jedis jedis = new Jedis(jedisConnectionStr);
-        return jedis.get(key);
+        String result = jedis.get(key);
+        jedis.close();
+        return result;
     }
 
     @Override
     public void setWithExpired(String key, String value, long seconds) {
         Jedis jedis = new Jedis(jedisConnectionStr);
         jedis.setex(key, seconds, value);
+        jedis.close();
     }
 }
