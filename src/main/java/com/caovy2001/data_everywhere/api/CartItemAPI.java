@@ -95,7 +95,7 @@ public class CartItemAPI extends BaseAPI {
     }
 
 
-    @GetMapping(value = "/purchased")
+    @PostMapping(value = "/purchased")
     @PreAuthorize("hasAnyAuthority('USER')")
     public ResponseModel getPurchasedPaginatedList(@RequestBody CommandGetListCartItem command) {
         try {

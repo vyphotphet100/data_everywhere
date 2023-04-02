@@ -98,7 +98,7 @@ public class DatasetCollectionAPI extends BaseAPI {
         }
     }
 
-    @GetMapping("/purchased")
+    @PostMapping("/purchased")
     @PreAuthorize("hasAnyAuthority('USER')")
     public ResponseModel getPurchasedPaginatedList(@RequestBody CommandGetListDatasetCollection command) {
         try {
