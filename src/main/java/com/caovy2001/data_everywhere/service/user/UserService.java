@@ -64,9 +64,7 @@ public class UserService extends BaseService implements IUserService, IUserServi
                 command.getUsername(),
                 command.getPassword(),
                 command.getConfirmPassword(),
-                command.getFullName(),
-                command.getAddress(),
-                command.getBirthday())) {
+                command.getFullName())) {
             throw new Exception(ExceptionConstant.missing_param);
         }
 

@@ -45,10 +45,26 @@ public class DatasetCollectionService extends BaseService implements IDatasetCol
 
     @Override
     public Paginated<DatasetCollectionEntity> getPaginatedList(@NonNull CommandGetListDatasetCollection command) throws Exception {
-        if (command.getPage() <= 0) {
-            throw new Exception("invalid_page");
+        if (command.getPage() <= 0 || command.getSize() < 0) {
+            throw new Exception("invalid_page_or_size");
         }
 
+        Query query = this.buildQueryGetList(command);
+        if (query == null) {
+            return new Paginated<>(new ArrayList<>(), command.getPage(), command.getSize(), 0);
+        }
+
+        long total = mongoTemplate.count(query, DatasetCollectionEntity.class);
+        if (total == 0L) {
+            return new Paginated<>(new ArrayList<>(), command.getPage(), command.getSize(), 0);
+        }
+
+        query.with(PageRequest.of(command.getPage() - 1, command.getSize()));
+        List<DatasetCollectionEntity> datasetCollectionEntities = mongoTemplate.find(query, DatasetCollectionEntity.class);
+        return new Paginated<>(datasetCollectionEntities, command.getPage(), command.getSize(), total);
+    }
+
+    private Query buildQueryGetList(@NonNull CommandGetListDatasetCollection command) {
         Query query = new Query();
         Criteria criteria = new Criteria();
         List<Criteria> orCriteriaList = new ArrayList<>();
@@ -66,16 +82,20 @@ public class DatasetCollectionService extends BaseService implements IDatasetCol
                         .purchased(true)
                         .build());
                 if (CollectionUtils.isEmpty(cartItemEntities)) {
-                    return new Paginated<>(new ArrayList<>(), command.getPage(), command.getSize(), 0);
+                    return null;
                 }
 
                 List<String> datasetCollectionIds = new ArrayList<>(new HashSet<>(cartItemEntities.stream().map(CartItemEntity::getDatasetCollectionId).toList()));
                 if (CollectionUtils.isEmpty(datasetCollectionIds)) {
-                    return new Paginated<>(new ArrayList<>(), command.getPage(), command.getSize(), 0);
+                    return null;
                 }
 
                 andCriteriaList.add(Criteria.where("id").in(datasetCollectionIds));
             }
+        }
+
+        if (StringUtils.isNotBlank(command.getDatasetCategoryId())) {
+            andCriteriaList.add(Criteria.where("dataset_category_id").is(command.getDatasetCategoryId()));
         }
 
         if (CollectionUtils.isNotEmpty(orCriteriaList)) {
@@ -85,16 +105,8 @@ public class DatasetCollectionService extends BaseService implements IDatasetCol
         if (CollectionUtils.isNotEmpty(andCriteriaList)) {
             criteria.andOperator(andCriteriaList);
         }
-
         query.addCriteria(criteria);
-        long total = mongoTemplate.count(query, DatasetCollectionEntity.class);
-        if (total == 0L) {
-            return new Paginated<>(new ArrayList<>(), command.getPage(), command.getSize(), 0);
-        }
-
-        query.with(PageRequest.of(command.getPage() - 1, command.getSize()));
-        List<DatasetCollectionEntity> datasetCollectionEntities = mongoTemplate.find(query, DatasetCollectionEntity.class);
-        return new Paginated<>(datasetCollectionEntities, command.getPage(), command.getSize(), total);
+        return query;
     }
 
     @Override

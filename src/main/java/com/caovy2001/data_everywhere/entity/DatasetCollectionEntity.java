@@ -41,6 +41,9 @@ public class DatasetCollectionEntity {
     @Field("amount")
     private long amount;
 
+    @Field("dataset_category_id")
+    private String datasetCategoryId;
+
     @Transient
     private Boolean purchased;
 
