@@ -3,8 +3,8 @@ class Base {
     // static baseUrl = "http://127.0.0.1:8086";
     static originUrl = "http://127.0.0.1:5500";
 
-    static chatbotUrl = "http://103.200.20.180:8085";
-    // static chatbotUrl = "http://127.0.0.1:8085";
+    // static chatbotUrl = "http://103.200.20.180:8085";
+    static chatbotUrl = "http://127.0.0.1:8085";
 
 
     static setCookie(cname, cvalue, exMinutes) {
