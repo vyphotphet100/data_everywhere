@@ -41,6 +41,9 @@ public class DatasetCollectionEntity {
     @Field("amount")
     private long amount;
 
+    @Field("download_path")
+    private String downloadPath;
+
     @Field("dataset_category_id")
     private String datasetCategoryId;
 

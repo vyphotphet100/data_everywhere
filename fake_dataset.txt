@@ -1,0 +1,476 @@
+cateId_64455f968be6f94675e9f08d_Trending Datasets
+====
+Health conditions among children under age 18
+https://storage.googleapis.com/kaggle-datasets-images/3203158/5563355/40d560eadec99c6ba49aabf8d5999d4e/dataset-cover.jpg
+https://www.kaggle.com/datasets/utkarshx27/health-conditions-among-children-under-age-18/download?datasetVersionNumber=1
+====
+Bookings
+https://storage.googleapis.com/kaggle-datasets-images/3218404/5594018/0ab860c91f0076ce7761454e94e2c326/dataset-cover.jpg
+https://www.kaggle.com/datasets/sonu1maheshwari/bookingscom/download?datasetVersionNumber=2
+====
+Million Song Dataset + Spotify + Last.fm
+https://storage.googleapis.com/kaggle-datasets-images/3166258/5485048/f17c8c5c6d7d8d1a691bffe131523793/dataset-cover.jpg
+https://www.kaggle.com/datasets/undefinenull/million-song-dataset-spotify-lastfm/download?datasetVersionNumber=1
+====
+Predict Credit Card Defaulters
+https://storage.googleapis.com/kaggle-datasets-images/3226045/5608807/335183e7fa20aee25cadb96fa6cb38b9/dataset-cover.jpg
+https://www.kaggle.com/datasets/utkarshx27/default-of-credit-card-clients-dataset/download?datasetVersionNumber=1
+====
+Arrests for Marijuana Possession
+https://storage.googleapis.com/kaggle-datasets-images/3238325/5631796/eb7a57e29d572d4daec56309172bcf12/dataset-cover.png
+https://www.kaggle.com/datasets/utkarshx27/arrests-for-marijuana-possession/download?datasetVersionNumber=1
+====
+Affordable Housing by Town 2011-2022
+https://storage.googleapis.com/kaggle-datasets-images/3204087/5565150/16755d65706a13998ebcab5bb25e6a27/dataset-cover.png
+https://www.kaggle.com/datasets/utkarshx27/affordable-housing-by-town-2011-2022/download?datasetVersionNumber=1
+====
+NBA Injury Stats (1951 - 2023)
+https://storage.googleapis.com/kaggle-datasets-images/3159342/5469862/4914d80d0b1e7155a611c4af9e72193d/dataset-cover.jpg
+https://www.kaggle.com/datasets/loganlauton/nba-injury-stats-1951-2023/download?datasetVersionNumber=1
+====
+Monthly Transportation Statistics(136 columns)
+https://storage.googleapis.com/kaggle-datasets-images/3210983/5578836/1cf6c19b1e061d0a418c948ba54fb378/dataset-cover.jpg
+https://www.kaggle.com/datasets/utkarshx27/monthly-transportation-statistics/download?datasetVersionNumber=1
+====
+Car Price Prediction
+https://storage.googleapis.com/kaggle-datasets-images/3223716/5604111/33ae47730dbd8498403ecda7d172ec9b/dataset-cover.jpg
+https://www.kaggle.com/datasets/harshghadiya/car-price-prediction/download?datasetVersionNumber=1
+====
+Suicide Attempts in Shandong, China
+https://storage.googleapis.com/kaggle-datasets-images/3230370/5617993/c4650d257ea42d7a6dbccb00a9f99874/dataset-cover.jpg
+https://www.kaggle.com/datasets/utkarshx27/suicide-attempts-in-shandong-china/download?datasetVersionNumber=1
+====
+US Public Food Assistance 2 - SNAP
+https://storage.googleapis.com/kaggle-datasets-images/3145538/5438208/2e70d4315bb298396ab365c1fb4e1349/dataset-cover.jpg
+https://www.kaggle.com/datasets/jpmiller/food-security/download?datasetVersionNumber=2
+====
+7500 hotels from Airbnb, Booking and Hotels.com
+https://storage.googleapis.com/kaggle-datasets-images/3222832/5602416/e0234f0511be5372a50b839836aaf391/dataset-cover.png
+https://www.kaggle.com/datasets/mykhailozub/500-hotels-from-airbnb-booking-and-hotelscom/download?datasetVersionNumber=1
+====
+AirIndia Monthly Passenger Traffic
+https://storage.googleapis.com/kaggle-datasets-images/3156392/5464002/c191640de7fe62bbaa2108b3e00baf14/dataset-cover.jpg
+https://www.kaggle.com/datasets/nishantbhardwaj07/airindia-monthly-passenger-traffic/download?datasetVersionNumber=7
+====
+Valorant Champions 2022 Istanbul Stats
+https://storage.googleapis.com/kaggle-datasets-images/3122806/5385313/e2eefc03dc8079f802652792d9e94c6a/dataset-cover.jpg
+https://www.kaggle.com/datasets/shihouinyoruichi/valorant-champions-2022-istanbul-stats/download?datasetVersionNumber=1
+====
+Weather Data
+https://storage.googleapis.com/kaggle-datasets-images/new-version-temp-images/default-backgrounds-30.png-7207833/dataset-cover.png
+https://www.kaggle.com/datasets/rever3nd/weather-data/download?datasetVersionNumber=1
+====
+Real Estate Sales 2001-2020 GL
+https://storage.googleapis.com/kaggle-datasets-images/3224580/5606108/cc4e4d29f2d8cf101a658426011c3e24/dataset-cover.jpg
+https://www.kaggle.com/datasets/utkarshx27/real-estate-sales-2001-2020-gl/download?datasetVersionNumber=1
+====
+Popular Baby Names
+https://storage.googleapis.com/kaggle-datasets-images/3224556/5606052/47ababf64abf7024f72dc19c2e94b212/dataset-cover.jpg
+https://www.kaggle.com/datasets/utkarshx27/popular-baby-names/download?datasetVersionNumber=1
+====
+Goldman Sachs & JPMorgan Chase share prices
+https://storage.googleapis.com/kaggle-datasets-images/3174982/5503911/ab57fc0eb524c652e39a06b7a041ed3f/dataset-cover.jpg
+https://www.kaggle.com/datasets/kapturovalexander/goldman-sachs-and-jpmorgan-chase-share-prices/download?datasetVersionNumber=3
+====
+NBA 2017-23 Dataset
+https://storage.googleapis.com/kaggle-datasets-images/3145199/5437374/93c94c91a4730b6f89cb378582e1c56b/dataset-cover.jpg
+https://www.kaggle.com/datasets/kalsangsherpa100/nba-2017-23-dataset/download?datasetVersionNumber=1
+====
+The Great Real Estate Data Challenge
+https://storage.googleapis.com/kaggle-datasets-images/new-version-temp-images/default-backgrounds-10.png-4760409/dataset-cover.png
+https://www.kaggle.com/datasets/gauravduttakiit/the-great-real-estate-data-challenge/download?datasetVersionNumber=1
+------------------------------------------------------------------------------------------------------------------------------
+
+
+
+cateId_64455fb28be6f94675e9f08e_Sports
+====
+England Football Matches
+https://storage.googleapis.com/kaggle-datasets-images/3183717/5521108/0c79750714b983c9b873630595430cb2/dataset-cover.png
+https://www.kaggle.com/datasets/cuecacuela/england-football-matches/download?datasetVersionNumber=1
+====
+Uncover Cricket Legends: Cricketer's WikiData
+https://storage.googleapis.com/kaggle-datasets-images/3212845/5582755/4ac2c11719bb0d97240a7538f36d99c7/dataset-cover.jpg
+https://www.kaggle.com/datasets/varunnagpalspyz/uncover-cricket-legends-cricketers-wikidata/download?datasetVersionNumber=1
+====
+Interesting Data to Visualize
+https://storage.googleapis.com/kaggle-datasets-images/new-version-temp-images/default-backgrounds-84.png-2603295/dataset-cover.png
+https://www.kaggle.com/datasets/alexisbcook/data-for-datavis/download?datasetVersionNumber=2
+====
+Fake News football
+https://storage.googleapis.com/kaggle-datasets-images/3076587/5289554/dcce8a7b167dffa9ce084632486014b9/dataset-cover.jpg
+https://www.kaggle.com/datasets/shawkyelgendy/fake-news-football/download?datasetVersionNumber=1
+====
+Premier League 2022-2023
+https://storage.googleapis.com/kaggle-datasets-images/3132405/5407167/54eb3c76157dab548b634512bc90e12b/dataset-cover.png
+https://www.kaggle.com/datasets/evangower/premier-league-2022-2023/download?datasetVersionNumber=5
+====
+NBA Injury Stats (1951 - 2023)
+https://storage.googleapis.com/kaggle-datasets-images/3159342/5469862/4914d80d0b1e7155a611c4af9e72193d/dataset-cover.jpg
+https://www.kaggle.com/datasets/loganlauton/nba-injury-stats-1951-2023/download?datasetVersionNumber=1
+====
+ATP Tennis 2013 - 2023
+https://storage.googleapis.com/kaggle-datasets-images/3100955/5340006/ae4f2cfe7e38055e8bc43ccc0172d4fb/dataset-cover.png
+https://www.kaggle.com/datasets/dissfya/atp-tennis-2013-2023/download?datasetVersionNumber=1
+====
+MLB Ballparks
+https://storage.googleapis.com/kaggle-datasets-images/3102188/5342510/e35c1d9aad882c4501eb80d65dea4340/dataset-cover.jpg
+https://www.kaggle.com/datasets/paulrjohnson/mlb-ballparks/download?datasetVersionNumber=4
+====
+Boston Marathon Winners (Men & Women)
+https://storage.googleapis.com/kaggle-datasets-images/3112745/5363173/04093c6626e00a23ecdbf5d48ab1bdd5/dataset-cover.jpg
+https://www.kaggle.com/datasets/zhikchen/boston-marathon-winners-men-and-women/download?datasetVersionNumber=2
+====
+Indian Premier League Cricket (2023)
+https://storage.googleapis.com/kaggle-datasets-images/3077431/5292046/56e8d7d3b093ed083c0f90b67825a00e/dataset-cover.png
+https://www.kaggle.com/datasets/pardeep19singh/indian-premier-league-cricket-2023/download?datasetVersionNumber=43
+====
+Women's tennis matches for 2016-2017
+https://storage.googleapis.com/kaggle-datasets-images/3097064/5332174/75c62c01e95d0718ea04742e89b1daed/dataset-cover.jpg
+https://www.kaggle.com/datasets/serangu/woman-tennis-2016-2017-years/download?datasetVersionNumber=1
+====
+MLB Hitting and Pitching Stats Through All Time
+https://storage.googleapis.com/kaggle-datasets-images/3085207/5307320/588ef42135108f776cb7c3e7c7d48f81/dataset-cover.png
+https://www.kaggle.com/datasets/joyshil0599/mlb-hitting-and-pitching-stats-through-the-years/download?datasetVersionNumber=1
+====
+FIFA World Cup Dataset
+https://storage.googleapis.com/kaggle-datasets-images/3084466/5305652/c558d9562265a51c8c1011aac25b282c/dataset-cover.jpg
+https://www.kaggle.com/datasets/shivd24coder/fifa-world-cup-dataset/download?datasetVersionNumber=2
+====
+FPL Tweets Dataset
+https://storage.googleapis.com/kaggle-datasets-images/3108275/5354480/fb97b86b537cc48764a94db0569dfcd4/dataset-cover.jpg
+https://www.kaggle.com/datasets/prasad22/fpl-tweets-dataset/download?datasetVersionNumber=1
+------------------------------------------------------------------------------------------------------------------------------
+
+
+
+cateId_64455fbf8be6f94675e9f08f_Health
+====
+Diabetes prediction dataset
+https://storage.googleapis.com/kaggle-datasets-images/3102947/5344155/d4f2d9d63736fff7b6ba10f73774752e/dataset-cover.png
+https://www.kaggle.com/datasets/iammustafatz/diabetes-prediction-dataset/download?datasetVersionNumber=1
+====
+List of Epidemics and Pandemics in World History
+https://storage.googleapis.com/kaggle-datasets-images/3221295/5599564/3b42a6f96b16ee2a5bfd411d672cbe30/dataset-cover.jpg
+https://www.kaggle.com/datasets/rajkumarpandey02/list-of-epidemics-and-pandemics-in-world-history/download?datasetVersionNumber=1
+====
+Covid-19-country-statistics-dataset
+https://storage.googleapis.com/kaggle-datasets-images/3194747/5543953/c0ff5eebb29491e11befae291d5cb8e5/dataset-cover.png
+https://www.kaggle.com/datasets/harshghadiya/covid-19-country-statistics-dataset/download?datasetVersionNumber=1
+====
+Cancer Data
+https://storage.googleapis.com/kaggle-datasets-images/3032092/5212576/69196f95972506ae66da827386432a26/dataset-cover.jpg
+https://www.kaggle.com/datasets/erdemtaha/cancer-data/download?datasetVersionNumber=1
+====
+Mental Health Care
+https://storage.googleapis.com/kaggle-datasets-images/3201382/5558647/1edcaf822b8e05c76842b9db8ba3f8c1/dataset-cover.jpg
+https://www.kaggle.com/datasets/utkarshx27/mental-health-care/download?datasetVersionNumber=1
+====
+Fastfood Nutrition
+https://storage.googleapis.com/kaggle-datasets-images/3028284/5206752/4ccaea90a87ac93d5d7a51bec66fd145/dataset-cover.png
+https://www.kaggle.com/datasets/ulrikthygepedersen/fastfood-nutrition/download?datasetVersionNumber=1
+====
+U.S. Chronic Disease Indicators (CDI) Dataset
+https://storage.googleapis.com/kaggle-datasets-images/3199815/5555383/2530e05d9b0e3fc64d48da9ebc0e0b4e/dataset-cover.jpg
+https://www.kaggle.com/datasets/utkarshx27/us-chronic-disease-indicators-cdi/download?datasetVersionNumber=1
+====
+US Public Food Assistance 1 - WIC
+https://storage.googleapis.com/kaggle-datasets-images/10128/14270/90070a54635db2ed156faa89b97cd102/dataset-cover.jpg
+https://www.kaggle.com/datasets/jpmiller/publicassistance/download?datasetVersionNumber=9
+====
+Daily cases and deaths covid-19
+https://storage.googleapis.com/kaggle-datasets-images/3179873/5513069/5f65ef42cfeff8b093c5439964bc44e1/dataset-cover.png
+https://www.kaggle.com/datasets/hossamahmedsalah/daily-cases-and-deaths-covid-19/download?datasetVersionNumber=1
+====
+Gender Inequality Index
+https://storage.googleapis.com/kaggle-datasets-images/3053782/5248115/c7c8b6fa72b4a39e8e557584a2fae51c/dataset-cover.jpg
+https://www.kaggle.com/datasets/gianinamariapetrascu/gender-inequality-index/download?datasetVersionNumber=2
+====
+Taxol Drug Resistance cell lines in Breast Cancer
+https://storage.googleapis.com/kaggle-datasets-images/3122833/5385617/371ffc371f039eb661629f3130315c36/dataset-cover.jpeg
+https://www.kaggle.com/datasets/aliabedimadiseh/taxol-drug-resistance-cell-lines-in-breast-cancer/download?datasetVersionNumber=2
+====
+Alzheimer's Disease and Healthy Aging Data
+https://storage.googleapis.com/kaggle-datasets-images/3199872/5555513/b102e0a40ecb2b7fdc3e83c63996a96d/dataset-cover.jpeg
+https://www.kaggle.com/datasets/utkarshx27/alzheimers-disease-and-healthy-aging-data/download?datasetVersionNumber=1
+====
+Heart Disease Cleveland
+https://storage.googleapis.com/kaggle-datasets-images/3059233/5257176/77f24bce7e2d17e286779da90834efd8/dataset-cover.jpg
+https://www.kaggle.com/datasets/ritwikb3/heart-disease-cleveland/download?datasetVersionNumber=1
+====
+World Happiness Report, 2005-Present
+https://storage.googleapis.com/kaggle-datasets-images/3046107/5235417/4f5503668afa44705765c6546c7618ee/dataset-cover.jpg
+https://www.kaggle.com/datasets/usamabuttar/world-happiness-report-2005-present/download?datasetVersionNumber=1
+====
+Life Expectancy (WHO) Fixed
+https://storage.googleapis.com/kaggle-datasets-images/3065197/5266275/d5fe6a424c0aa8fdfcb04a085ba85c00/dataset-cover.png
+https://www.kaggle.com/datasets/lashagoch/life-expectancy-who-updated/download?datasetVersionNumber=1
+====
+Diabetes Dataset By Age Standardized Countries 
+https://storage.googleapis.com/kaggle-datasets-images/3068783/5272260/6ad8294f448d8307e2133e590c6e8137/dataset-cover.jpg
+https://www.kaggle.com/datasets/wawajahat/diabetes-dataset-by-age-standardized-countries/download?datasetVersionNumber=1
+====
+Kidney Stone Dataset
+https://storage.googleapis.com/kaggle-datasets-images/3120027/5379484/99a67882d5e9b471d4f3dcc4969c43cf/dataset-cover.jpg
+https://www.kaggle.com/datasets/harshghadiya/kidneystone/download?datasetVersionNumber=1
+====
+Symptom2Disease
+https://storage.googleapis.com/kaggle-datasets-images/3087304/5312008/7752364886ad24b8fe0bd90703a814b3/dataset-cover.png
+https://www.kaggle.com/datasets/niyarrbarman/symptom2disease/download?datasetVersionNumber=1
+====
+Pima Indians Diabetes Database
+https://storage.googleapis.com/kaggle-datasets-images/228/482/a520351269b547c89afe790820a1087e/dataset-cover.jpeg
+https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database/download?datasetVersionNumber=1
+------------------------------------------------------------------------------------------------------------------------------
+
+
+cateId_64455fc88be6f94675e9f090_Software
+====
+Popular Video Games 1980 - 2023
+https://storage.googleapis.com/kaggle-datasets-images/3038295/5222135/8e8fd16800a07039c2ee58a795ead8ef/dataset-cover.png
+https://www.kaggle.com/datasets/arnabchaki/popular-video-games-1980-2023/download?datasetVersionNumber=1
+====
+USA Tech Companies Stats
+https://storage.googleapis.com/kaggle-datasets-images/3042087/5231789/1a22fce813c9d51451643a499eddfd86/dataset-cover.jpg
+https://www.kaggle.com/datasets/lamiatabassum/top-50-us-tech-companies-2022-2023-dataset/download?datasetVersionNumber=3
+====
+OpenAssistant Conversations Dataset (OASST1)
+https://storage.googleapis.com/kaggle-datasets-images/3147716/5443579/01bb6503a3afd46ba4510fa764e0d51f/dataset-cover.png
+https://www.kaggle.com/datasets/snehilsanyal/oasst1/download?datasetVersionNumber=1
+====
+California Housing Prices
+https://storage.googleapis.com/kaggle-datasets-images/5227/7876/3d18388d350d2791f4121a232acce097/dataset-cover.jpg
+https://www.kaggle.com/datasets/camnugent/california-housing-prices/download?datasetVersionNumber=1
+====
+IBM HR Analytics Employee Attrition & Performance
+https://storage.googleapis.com/kaggle-datasets-images/1067/1925/5fc43e97e25975d1a14cba2e706255cb/dataset-cover.jpg
+https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset/download?datasetVersionNumber=1
+====
+Databricks Dolly 15K Dataset
+https://storage.googleapis.com/kaggle-datasets-images/3124453/5389663/8993c3afeb91835b89d231e2c032d846/dataset-cover.png
+https://www.kaggle.com/datasets/snehilsanyal/databricks-dolly-15k-dataset/download?datasetVersionNumber=2
+====
+NIH Chest X-rays
+https://storage.googleapis.com/kaggle-datasets-images/5839/8684/9b6ad772f7f3ba299b1fcb712abf3a1a/dataset-cover.jpg
+https://www.kaggle.com/datasets/nih-chest-xrays/data/download?datasetVersionNumber=3
+====
+Global Terrorism Database
+https://storage.googleapis.com/kaggle-datasets-images/504/1012/b4f1185ba3ab02238e27a7e943fc8437/dataset-cover.png
+https://www.kaggle.com/datasets/START-UMD/gtd/download?datasetVersionNumber=3
+====
+water bodies in satellite imagery 
+https://storage.googleapis.com/kaggle-datasets-images/3198449/5551724/fd1e87bc56b44621838bfb182ad8a38a/dataset-cover.PNG
+https://www.kaggle.com/datasets/tekbahadurkshetri/water-bodies-in-satellite-imagery/download?datasetVersionNumber=1
+====
+GitHub Repos
+https://storage.googleapis.com/kaggle-datasets-images/6178/9082/ae879d8a06e6163458919a1b7595ae2a/dataset-cover.jpg
+https://www.kaggle.com/datasets/github/github-repos/download?datasetVersionNumber=3
+====
+GoogleNews-vectors-negative300
+https://storage.googleapis.com/kaggle-datasets-images/new-version-temp-images/default-backgrounds-94.png-12893/dataset-cover.png
+https://www.kaggle.com/datasets/leadbest/googlenewsvectorsnegative300/download?datasetVersionNumber=2
+====
+ResNet-50
+https://storage.googleapis.com/kaggle-datasets-images/6209/9122/9dbea1f498f8d02e6c26ead7f130af04/dataset-cover.png
+https://www.kaggle.com/datasets/keras/resnet50/download?datasetVersionNumber=2
+====
+CIFAR-10 Python
+https://storage.googleapis.com/kaggle-datasets-images/11102/15444/c2a3fda606c62065a0915b4df818e88a/dataset-cover.jpg
+https://www.kaggle.com/datasets/pankrzysiu/cifar10-python/download?datasetVersionNumber=1
+====
+Face Detection in Images
+https://storage.googleapis.com/kaggle-datasets-images/36341/54972/e92d46e8c6754c16c2dc19df1f08dd9d/dataset-cover.png
+https://www.kaggle.com/datasets/dataturks/face-detection-in-images/download?datasetVersionNumber=1
+====
+Combined trajectories
+https://storage.googleapis.com/kaggle-datasets-images/new-version-temp-images/default-backgrounds-1.png-6620289/dataset-cover.png
+https://www.kaggle.com/datasets/donotmess/combined-trajectories/download?datasetVersionNumber=1
+====
+Diabetic Retinopathy (resized)
+https://storage.googleapis.com/kaggle-datasets-images/131128/312839/f2a834dc8580f0788bea087e8d3a6dbe/dataset-cover.jpeg
+https://www.kaggle.com/datasets/tanlikesmath/diabetic-retinopathy-resized/download?datasetVersionNumber=7
+====
+Google Play Store Apps
+https://storage.googleapis.com/kaggle-datasets-images/157336/360692/4366b93fcedd1f9c09ac445622b01aea/dataset-cover.jpg
+https://www.kaggle.com/datasets/gauthamp10/google-playstore-apps/download?datasetVersionNumber=7
+====
+IDS 2018 Intrusion CSVs (CSE-CIC-IDS2018)
+https://storage.googleapis.com/kaggle-datasets-images/902298/1530359/5344d50ea94117af6af22dd9cfaf9f28/dataset-cover.jpg
+https://www.kaggle.com/datasets/solarmainframe/ids-intrusion-csv/download?datasetVersionNumber=1
+====
+Hand Gesture Recognition Database
+https://storage.googleapis.com/kaggle-datasets-images/39466/61155/11ed21def9dc98bf3d3db08b43885e21/dataset-cover.png
+https://www.kaggle.com/datasets/gti-upm/leapgestrecog/download?datasetVersionNumber=1
+====
+Microsoft Stock- Time Series Analysis
+https://storage.googleapis.com/kaggle-datasets-images/1409311/2334627/6d609a5126b78a620571431072583cc1/dataset-cover.jpg
+https://www.kaggle.com/datasets/vijayvvenkitesh/microsoft-stock-time-series-analysis/download?datasetVersionNumber=1
+------------------------------------------------------------------------------------------------------------------------------
+
+
+
+cateId_64455fce8be6f94675e9f091_Food
+====
+Indian Restaurants 2023
+https://storage.googleapis.com/kaggle-datasets-images/3192116/5538457/ace7d3bff3da6e2dbc2088d5151efd47/dataset-cover.png
+https://www.kaggle.com/datasets/arnabchaki/indian-restaurants-2023/download?datasetVersionNumber=1
+====
+Fastfood Nutrition
+https://storage.googleapis.com/kaggle-datasets-images/3028284/5206752/4ccaea90a87ac93d5d7a51bec66fd145/dataset-cover.png
+https://www.kaggle.com/datasets/ulrikthygepedersen/fastfood-nutrition/download?datasetVersionNumber=1
+====
+Wine Reviews
+https://storage.googleapis.com/kaggle-datasets-images/1442/2584/c583eedd59e12a6c54266c13a50879c4/dataset-cover.jpg
+https://www.kaggle.com/datasets/zynicide/wine-reviews/download?datasetVersionNumber=4
+====
+Ramen Ratings
+https://storage.googleapis.com/kaggle-datasets-images/9366/13206/7141fa5a79edbe824705ac9a30894142/dataset-cover.jpeg
+https://www.kaggle.com/datasets/residentmario/ramen-ratings/download?datasetVersionNumber=1
+====
+Fruits Dataset (Images)
+https://storage.googleapis.com/kaggle-datasets-images/3180206/5514079/d4f9b6fd9a0bced899130e636b240aa9/dataset-cover.jpg
+https://www.kaggle.com/datasets/shreyapmaher/fruits-dataset-images/download?datasetVersionNumber=1
+====
+Broken Eggs
+https://storage.googleapis.com/kaggle-datasets-images/3114787/5367524/b8a14b7c8db929e98fcf48bd5ac89f96/dataset-cover.jpg
+https://www.kaggle.com/datasets/frankpereny/broken-eggs/download?datasetVersionNumber=1
+====
+Avocado Prices
+https://storage.googleapis.com/kaggle-datasets-images/30292/38613/ab6171de10588e40148aed91ff39e2e9/dataset-cover.jpg
+https://www.kaggle.com/datasets/neuromusic/avocado-prices/download?datasetVersionNumber=1
+====
+Red Wine Quality
+https://storage.googleapis.com/kaggle-datasets-images/4458/6836/30587db9a40233164f65a4a3f148f40d/dataset-cover.jpg
+https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009/download?datasetVersionNumber=2
+====
+US Public Food Assistance 2 - SNAP
+https://storage.googleapis.com/kaggle-datasets-images/3145538/5438208/2e70d4315bb298396ab365c1fb4e1349/dataset-cover.jpg
+https://www.kaggle.com/datasets/jpmiller/food-security/download?datasetVersionNumber=2
+====
+Amazon Fine Food Reviews
+https://storage.googleapis.com/kaggle-datasets-images/18/18/default-backgrounds/dataset-cover.jpg
+https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews/download?datasetVersionNumber=2
+====
+Egg dataset (Production State wise-India)
+https://storage.googleapis.com/kaggle-datasets-images/3193682/5541488/376a2b2ab20b6ac1debbcd88085cb193/dataset-cover.jpg
+https://www.kaggle.com/datasets/niharika41298/egg-production-dataset-state-wise-india/download?datasetVersionNumber=1
+====
+Fruits 360
+https://storage.googleapis.com/kaggle-datasets-images/5857/8713/df2a86f4b6ecfff7996be179a4e8ebdf/dataset-cover.jpg
+https://www.kaggle.com/datasets/moltean/fruits/download?datasetVersionNumber=9
+====
+Wild blueberry Yield Prediction Dataset
+https://storage.googleapis.com/kaggle-datasets-images/1490445/2462316/7de40e961308bead6cd6a7ff1307e776/dataset-cover.jpg
+https://www.kaggle.com/datasets/shashwatwork/wild-blueberry-yield-prediction-dataset/download?datasetVersionNumber=2
+====
+Wine Quality Dataset
+https://storage.googleapis.com/kaggle-datasets-images/1866301/3047725/a8442c4170479f83d6dcab16b655bf87/dataset-cover.jpg
+https://www.kaggle.com/datasets/yasserh/wine-quality-dataset/download?datasetVersionNumber=1
+====
+USDA National Nutrient Database for Standard Refer
+https://storage.googleapis.com/kaggle-datasets-images/3051925/5245046/5107e0c99db3b784c606dca3ba40a216/dataset-cover.jpg
+https://www.kaggle.com/datasets/georgiyfedorov/nutricients/download?datasetVersionNumber=5
+====
+ FSIS sampling of raw beef products 
+https://storage.googleapis.com/kaggle-datasets-images/3108642/5355185/ec89e71374613d2ff0534691ee419105/dataset-cover.jpg
+https://www.kaggle.com/datasets/vidiqlogy/fsis-sampling-of-raw-beef-products/download?datasetVersionNumber=1
+====
+Zomato Bangalore Restaurants
+https://storage.googleapis.com/kaggle-datasets-images/153420/352891/c163500aee56f5201e1187c42e19471c/dataset-cover.jpg
+https://www.kaggle.com/datasets/himanshupoddar/zomato-bangalore-restaurants/download?datasetVersionNumber=1
+====
+Tutti Frutti - classification of 60 fruit types
+https://storage.googleapis.com/kaggle-datasets-images/3071870/5278518/4e3d08a19ce3c2d2f6d7a3e60ed5f18a/dataset-cover.jpg
+https://www.kaggle.com/datasets/patriciabrezeanu/60-fruit-types-curated-dataset/download?datasetVersionNumber=1
+====
+Fruits and Vegetables Image Recognition Dataset
+https://storage.googleapis.com/kaggle-datasets-images/952827/1613819/d6088a240b65b74c5b8fa735958b08c5/dataset-cover.jpg
+https://www.kaggle.com/datasets/kritikseth/fruit-and-vegetable-image-recognition/download?datasetVersionNumber=8
+====
+Wine Quality
+https://storage.googleapis.com/kaggle-datasets-images/new-version-temp-images/default-backgrounds-82.png-1386728/dataset-cover.png
+https://www.kaggle.com/datasets/rajyellow46/wine-quality/download?datasetVersionNumber=1
+------------------------------------------------------------------------------------------------------------------------------
+
+
+
+cateId_64455fd48be6f94675e9f092_Travel
+====
+Oyo hotel rooms
+https://storage.googleapis.com/kaggle-datasets-images/3211161/5579263/2e693366642b75ac3c20209bab2184eb/dataset-cover.jpg
+https://www.kaggle.com/datasets/sonu1maheshwari/oyo-hotel-rooms/download?datasetVersionNumber=2
+====
+Airbnb Cleaned Europe Dataset
+https://storage.googleapis.com/kaggle-datasets-images/3045965/5235174/bab7c20aceab0cd60fbd944b681aeefc/dataset-cover.jpeg
+https://www.kaggle.com/datasets/dipeshkhemani/airbnb-cleaned-europe-dataset/download?datasetVersionNumber=1
+====
+Hotel Dataset: Rates, Reviews & Amenities(6k+)
+https://storage.googleapis.com/kaggle-datasets-images/3150721/5449910/2e891a669c8ef45083f495f05b56c578/dataset-cover.png
+https://www.kaggle.com/datasets/joyshil0599/hotel-dataset-rates-reviews-and-amenities5k/download?datasetVersionNumber=1
+====
+Thailand Domestic Tourism Statistics
+https://storage.googleapis.com/kaggle-datasets-images/3101409/5340863/f65b455aae753590d1c2c4746630f4a3/dataset-cover.jpg
+https://www.kaggle.com/datasets/thaweewatboy/thailand-domestic-tourism-statistics/download?datasetVersionNumber=3
+====
+Port Shipment Dataset
+https://storage.googleapis.com/kaggle-datasets-images/3092858/5323603/5c7af2cc79e3c788d18a24017b005b6d/dataset-cover.jpg
+https://www.kaggle.com/datasets/mikoajfish99/port-of-los-angeles/download?datasetVersionNumber=1
+====
+International Tourism Receipts
+https://storage.googleapis.com/kaggle-datasets-images/3033536/5214716/6ce3593ba18b660f0e89d20c56ed0d2b/dataset-cover.jpg
+https://www.kaggle.com/datasets/abdulhamitcelik/international-tourism-receipts/download?datasetVersionNumber=1
+====
+Housing Cost in New York
+https://storage.googleapis.com/kaggle-datasets-images/3031155/5211085/88169f67ecb909a220c252d77b57bfa7/dataset-cover.jpg
+https://www.kaggle.com/datasets/anandaramg/apartment-cost-in-new-york-city/download?datasetVersionNumber=1
+====
+Hotel booking demand
+https://storage.googleapis.com/kaggle-datasets-images/511638/944030/a5363784c50661435af251da741c9ba6/dataset-cover.jpg
+https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand/download?datasetVersionNumber=1
+====
+Chicago Taxi Trips
+https://storage.googleapis.com/kaggle-datasets-images/22219/28536/6ced60cb0627305f18262d5b32270d47/dataset-cover.jpeg
+https://www.kaggle.com/datasets/chicago/chicago-taxi-trips-bq/download?datasetVersionNumber=1
+====
+New York City Airbnb Open Data
+https://storage.googleapis.com/kaggle-datasets-images/268833/559075/cf825b5af1f904cd1ea6404039abc88e/dataset-cover.jpg
+https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data/download?datasetVersionNumber=3
+====
+Traveler Trip Dataset 
+https://storage.googleapis.com/kaggle-datasets-images/2969743/5113618/eeb081b38d3ec79f26ccfac0b86f9330/dataset-cover.jpg
+https://www.kaggle.com/datasets/rkiattisak/traveler-trip-data/download?datasetVersionNumber=1
+====
+Comprehensive Flight Data from Priceline
+https://storage.googleapis.com/kaggle-datasets-images/3048159/5239037/a1af447ed5d9ddb2ea7569c3a3894370/dataset-cover.png
+https://www.kaggle.com/datasets/joyshil0599/comprehensive-flight-data-from-priceline/download?datasetVersionNumber=1
+====
+🛬 Airports in Thailand
+https://storage.googleapis.com/kaggle-datasets-images/3039762/5224656/250d5fa8275f76cd07ec92a320a5417b/dataset-cover.jpg
+https://www.kaggle.com/datasets/thitiwat/airport-in-thailand/download?datasetVersionNumber=2
+====
+Hotel Reservations Dataset
+https://storage.googleapis.com/kaggle-datasets-images/2783627/4807272/3ad64f5008c5b0e446f91bec01562218/dataset-cover.jpg
+https://www.kaggle.com/datasets/ahsan81/hotel-reservations-classification-dataset/download?datasetVersionNumber=1
+====
+Hotel Booking 
+https://storage.googleapis.com/kaggle-datasets-images/1437463/2378746/e31e8170a1e0c43cadb0eeb3f6af8159/dataset-cover.jpg
+https://www.kaggle.com/datasets/mojtaba142/hotel-booking/download?datasetVersionNumber=1
+====
+Overseas Pakistani Population and Remittance
+https://storage.googleapis.com/kaggle-datasets-images/3084298/5305300/af891f1be63b15284615f0b91d893c35/dataset-cover.jpg
+https://www.kaggle.com/datasets/tayyarhussain/overseas-pakistani-population-and-remittance/download?datasetVersionNumber=1
+====
+Airbnb Prices in European Cities
+https://storage.googleapis.com/kaggle-datasets-images/2919695/5030966/f5941394c4678c88e2043402bc338896/dataset-cover.png
+https://www.kaggle.com/datasets/thedevastator/airbnb-prices-in-european-cities/download?datasetVersionNumber=2
+====
+Roller Coaster Database
+https://storage.googleapis.com/kaggle-datasets-images/1727728/2824917/2d203a432b8c72dc9232a3704213d4f3/dataset-cover.jpg
+https://www.kaggle.com/datasets/robikscube/rollercoaster-database/download?datasetVersionNumber=2
+====
+Monthly Transportation Statistics(136 columns)
+https://storage.googleapis.com/kaggle-datasets-images/3210983/5578836/1cf6c19b1e061d0a418c948ba54fb378/dataset-cover.jpg
+https://www.kaggle.com/datasets/utkarshx27/monthly-transportation-statistics/download?datasetVersionNumber=1
+------------------------------------------------------------------------------------------------------------------------------
+
+

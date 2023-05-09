@@ -1,0 +1,77 @@
+cateId_64455fd48be6f94675e9f092_Travel
+====
+Oyo hotel rooms
+https://storage.googleapis.com/kaggle-datasets-images/3211161/5579263/2e693366642b75ac3c20209bab2184eb/dataset-cover.jpg
+https://www.kaggle.com/datasets/sonu1maheshwari/oyo-hotel-rooms/download?datasetVersionNumber=2
+====
+Airbnb Cleaned Europe Dataset
+https://storage.googleapis.com/kaggle-datasets-images/3045965/5235174/bab7c20aceab0cd60fbd944b681aeefc/dataset-cover.jpeg
+https://www.kaggle.com/datasets/dipeshkhemani/airbnb-cleaned-europe-dataset/download?datasetVersionNumber=1
+====
+Hotel Dataset: Rates, Reviews & Amenities(6k+)
+https://storage.googleapis.com/kaggle-datasets-images/3150721/5449910/2e891a669c8ef45083f495f05b56c578/dataset-cover.png
+https://www.kaggle.com/datasets/joyshil0599/hotel-dataset-rates-reviews-and-amenities5k/download?datasetVersionNumber=1
+====
+Thailand Domestic Tourism Statistics
+https://storage.googleapis.com/kaggle-datasets-images/3101409/5340863/f65b455aae753590d1c2c4746630f4a3/dataset-cover.jpg
+https://www.kaggle.com/datasets/thaweewatboy/thailand-domestic-tourism-statistics/download?datasetVersionNumber=3
+====
+Port Shipment Dataset
+https://storage.googleapis.com/kaggle-datasets-images/3092858/5323603/5c7af2cc79e3c788d18a24017b005b6d/dataset-cover.jpg
+https://www.kaggle.com/datasets/mikoajfish99/port-of-los-angeles/download?datasetVersionNumber=1
+====
+International Tourism Receipts
+https://storage.googleapis.com/kaggle-datasets-images/3033536/5214716/6ce3593ba18b660f0e89d20c56ed0d2b/dataset-cover.jpg
+https://www.kaggle.com/datasets/abdulhamitcelik/international-tourism-receipts/download?datasetVersionNumber=1
+====
+Housing Cost in New York
+https://storage.googleapis.com/kaggle-datasets-images/3031155/5211085/88169f67ecb909a220c252d77b57bfa7/dataset-cover.jpg
+https://www.kaggle.com/datasets/anandaramg/apartment-cost-in-new-york-city/download?datasetVersionNumber=1
+====
+Hotel booking demand
+https://storage.googleapis.com/kaggle-datasets-images/511638/944030/a5363784c50661435af251da741c9ba6/dataset-cover.jpg
+https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand/download?datasetVersionNumber=1
+====
+Chicago Taxi Trips
+https://storage.googleapis.com/kaggle-datasets-images/22219/28536/6ced60cb0627305f18262d5b32270d47/dataset-cover.jpeg
+https://www.kaggle.com/datasets/chicago/chicago-taxi-trips-bq/download?datasetVersionNumber=1
+====
+New York City Airbnb Open Data
+https://storage.googleapis.com/kaggle-datasets-images/268833/559075/cf825b5af1f904cd1ea6404039abc88e/dataset-cover.jpg
+https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data/download?datasetVersionNumber=3
+====
+Traveler Trip Dataset 
+https://storage.googleapis.com/kaggle-datasets-images/2969743/5113618/eeb081b38d3ec79f26ccfac0b86f9330/dataset-cover.jpg
+https://www.kaggle.com/datasets/rkiattisak/traveler-trip-data/download?datasetVersionNumber=1
+====
+Comprehensive Flight Data from Priceline
+https://storage.googleapis.com/kaggle-datasets-images/3048159/5239037/a1af447ed5d9ddb2ea7569c3a3894370/dataset-cover.png
+https://www.kaggle.com/datasets/joyshil0599/comprehensive-flight-data-from-priceline/download?datasetVersionNumber=1
+====
+🛬 Airports in Thailand
+https://storage.googleapis.com/kaggle-datasets-images/3039762/5224656/250d5fa8275f76cd07ec92a320a5417b/dataset-cover.jpg
+https://www.kaggle.com/datasets/thitiwat/airport-in-thailand/download?datasetVersionNumber=2
+====
+Hotel Reservations Dataset
+https://storage.googleapis.com/kaggle-datasets-images/2783627/4807272/3ad64f5008c5b0e446f91bec01562218/dataset-cover.jpg
+https://www.kaggle.com/datasets/ahsan81/hotel-reservations-classification-dataset/download?datasetVersionNumber=1
+====
+Hotel Booking 
+https://storage.googleapis.com/kaggle-datasets-images/1437463/2378746/e31e8170a1e0c43cadb0eeb3f6af8159/dataset-cover.jpg
+https://www.kaggle.com/datasets/mojtaba142/hotel-booking/download?datasetVersionNumber=1
+====
+Overseas Pakistani Population and Remittance
+https://storage.googleapis.com/kaggle-datasets-images/3084298/5305300/af891f1be63b15284615f0b91d893c35/dataset-cover.jpg
+https://www.kaggle.com/datasets/tayyarhussain/overseas-pakistani-population-and-remittance/download?datasetVersionNumber=1
+====
+Airbnb Prices in European Cities
+https://storage.googleapis.com/kaggle-datasets-images/2919695/5030966/f5941394c4678c88e2043402bc338896/dataset-cover.png
+https://www.kaggle.com/datasets/thedevastator/airbnb-prices-in-european-cities/download?datasetVersionNumber=2
+====
+Roller Coaster Database
+https://storage.googleapis.com/kaggle-datasets-images/1727728/2824917/2d203a432b8c72dc9232a3704213d4f3/dataset-cover.jpg
+https://www.kaggle.com/datasets/robikscube/rollercoaster-database/download?datasetVersionNumber=2
+====
+Monthly Transportation Statistics(136 columns)
+https://storage.googleapis.com/kaggle-datasets-images/3210983/5578836/1cf6c19b1e061d0a418c948ba54fb378/dataset-cover.jpg
+https://www.kaggle.com/datasets/utkarshx27/monthly-transportation-statistics/download?datasetVersionNumber=1
