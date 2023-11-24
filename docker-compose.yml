@@ -8,3 +8,15 @@ services:
     volumes:
       - /Users/caodinhsyvy/DATA/CapstoneProject/redisData/dataEverywhere:/data
 
+  api:
+    build:
+      context: .
+    image: data_everywhere_image
+    network_mode: host
+    command: [
+      "java",
+      "-jar",
+      "-Dspring.config.name=application",
+      "-Dspring.config.location=file:application.properties",
+      "app.jar"
+    ]
