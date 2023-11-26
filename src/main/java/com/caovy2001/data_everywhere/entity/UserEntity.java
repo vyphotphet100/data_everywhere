@@ -1,5 +1,6 @@
 package com.caovy2001.data_everywhere.entity;
 
+import com.caovy2001.data_everywhere.service.user.enumeration.UserServicePack;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -42,4 +43,7 @@ public class UserEntity {
 
     @Transient
     private String token;
+
+    @Transient
+    private UserServicePack currentServicePack;
 }

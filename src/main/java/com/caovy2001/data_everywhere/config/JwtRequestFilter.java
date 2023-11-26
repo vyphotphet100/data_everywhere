@@ -22,10 +22,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Base64;
-import java.util.Collection;
-import java.util.Map;
+import java.util.*;
 
 @Component
 public class JwtRequestFilter extends OncePerRequestFilter {
@@ -70,21 +67,37 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                 throw new Exception();
             }
 
-            Map<String, String> mapId = objectMapper.readValue((String)mapUser.get("user"), Map.class);
-            if (mapId == null || mapId.get("id") == null) {
-                throw new Exception();
-            }
+            UserEntity userEntity = null;
+            if (!decodedTokenUserInfo.contains("token")) { // Token của Data Everywhere
+                Map<String, String> mapId = objectMapper.readValue((String) mapUser.get("user"), Map.class);
+                if (mapId == null || mapId.get("id") == null) {
+                    throw new Exception();
+                }
 
-            String tokenToCompare = JwtUtil.generateToken(ParseObjectUtil.objectToJsonString(mapId));
-            if (StringUtils.isBlank(tokenToCompare)) {
-                throw new Exception();
-            }
+                String tokenToCompare = JwtUtil.generateToken(ParseObjectUtil.objectToJsonString(mapId));
+                if (StringUtils.isBlank(tokenToCompare)) {
+                    throw new Exception();
+                }
 
-            if (!token.equals(tokenToCompare)) {
-                throw new Exception(ExceptionConstant.auth_invalid);
-            }
+                if (!token.equals(tokenToCompare)) {
+                    throw new Exception(ExceptionConstant.auth_invalid);
+                }
 
-            UserEntity userEntity = userRepo.findById(mapId.get("id")).orElse(null);
+                userEntity = userRepo.findById(mapId.get("id")).orElse(null);
+            } else { // Token của chatbot service
+                String username = (String) ((LinkedHashMap) mapUser.get("user")).get("username");
+                if (StringUtils.isBlank(username)) {
+                    throw new Exception();
+                }
+
+                userEntity = userRepo.findByUsername(username);
+                if (userEntity == null) {
+                    userEntity = userRepo.save(UserEntity.builder()
+                            .username(username)
+                            .fullName((String) ((LinkedHashMap) mapUser.get("user")).get("fullname"))
+                            .build());
+                }
+            }
 
             if (userEntity != null) {
                 userEntity.setPassword(null);
