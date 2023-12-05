@@ -44,6 +44,6 @@ public class UserEntity {
     @Transient
     private String token;
 
-    @Transient
+    @Field("current_service_pack")
     private UserServicePack currentServicePack;
 }

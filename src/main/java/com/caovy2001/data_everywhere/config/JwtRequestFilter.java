@@ -3,6 +3,7 @@ package com.caovy2001.data_everywhere.config;
 import com.caovy2001.data_everywhere.constant.ExceptionConstant;
 import com.caovy2001.data_everywhere.entity.UserEntity;
 import com.caovy2001.data_everywhere.repository.UserRepository;
+import com.caovy2001.data_everywhere.service.user.enumeration.UserServicePack;
 import com.caovy2001.data_everywhere.utils.JwtUtil;
 import com.caovy2001.data_everywhere.utils.ParseObjectUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -90,12 +91,24 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                     throw new Exception();
                 }
 
+                UserServicePack userServicePack = UserServicePack.NORMAL;
+                if (((String) ((LinkedHashMap) mapUser.get("user")).get("currentServicePack")).equals("PREMIUM")) {
+                    userServicePack = UserServicePack.PREMIUM;
+                }
+
                 userEntity = userRepo.findByUsername(username);
                 if (userEntity == null) {
                     userEntity = userRepo.save(UserEntity.builder()
                             .username(username)
                             .fullName((String) ((LinkedHashMap) mapUser.get("user")).get("fullname"))
+                            .currentServicePack(userServicePack)
                             .build());
+                } else {
+                    if (userServicePack.equals(UserServicePack.PREMIUM) &&
+                            !UserServicePack.PREMIUM.equals(userEntity.getCurrentServicePack())) {
+                        userEntity.setCurrentServicePack(UserServicePack.PREMIUM);
+                        userEntity = userRepo.save(userEntity);
+                    }
                 }
             }
 

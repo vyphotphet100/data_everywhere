@@ -3,16 +3,20 @@ package com.caovy2001.data_everywhere.service.dataset_collection;
 import com.caovy2001.data_everywhere.command.cart_item.CommandGetListCartItem;
 import com.caovy2001.data_everywhere.command.dataset_collection.CommandGetDatasetCollection;
 import com.caovy2001.data_everywhere.command.dataset_collection.CommandGetListDatasetCollection;
+import com.caovy2001.data_everywhere.command.user.CommandGetListUser;
 import com.caovy2001.data_everywhere.constant.Constant;
 import com.caovy2001.data_everywhere.constant.ExceptionConstant;
 import com.caovy2001.data_everywhere.entity.CartItemEntity;
 import com.caovy2001.data_everywhere.entity.DatasetCollectionEntity;
+import com.caovy2001.data_everywhere.entity.UserEntity;
 import com.caovy2001.data_everywhere.model.FileResponse;
 import com.caovy2001.data_everywhere.model.pagination.Paginated;
 import com.caovy2001.data_everywhere.repository.DatasetCollectionRepository;
 import com.caovy2001.data_everywhere.service.BaseService;
 import com.caovy2001.data_everywhere.service.cart_item.ICartItemService;
 import com.caovy2001.data_everywhere.service.dataset_item.IDatasetItemService;
+import com.caovy2001.data_everywhere.service.user.IUserService;
+import com.caovy2001.data_everywhere.service.user.enumeration.UserServicePack;
 import lombok.NonNull;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.BooleanUtils;
@@ -42,6 +46,9 @@ public class DatasetCollectionService extends BaseService implements IDatasetCol
 
     @Autowired
     private IDatasetItemService datasetItemService;
+
+    @Autowired
+    private IUserService userService;
 
     @Override
     public Paginated<DatasetCollectionEntity> getPaginatedList(@NonNull CommandGetListDatasetCollection command) throws Exception {
@@ -122,9 +129,20 @@ public class DatasetCollectionService extends BaseService implements IDatasetCol
 
         if (BooleanUtils.isTrue(command.isCheckPurchased())) {
             if (StringUtils.isNotBlank(command.getUserId())) {
-                long _countPurchased = cartItemService.countPurchasedByUserIdAndDatasetCollectionId(command.getUserId(), command.getId());
-                if (_countPurchased > 0) {
+                List<UserEntity> userEntities = userService.getList(CommandGetListUser.builder()
+                        .id(command.getUserId())
+                        .build());
+                if (CollectionUtils.isEmpty(userEntities)) {
+                    throw new Exception(ExceptionConstant.error_occur);
+                }
+
+                if (UserServicePack.PREMIUM.equals(userEntities.get(0).getCurrentServicePack())) {
                     datasetCollectionEntity.setPurchased(true);
+                } else {
+                    long _countPurchased = cartItemService.countPurchasedByUserIdAndDatasetCollectionId(command.getUserId(), command.getId());
+                    if (_countPurchased > 0) {
+                        datasetCollectionEntity.setPurchased(true);
+                    }
                 }
             }
         }

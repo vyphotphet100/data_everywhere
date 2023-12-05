@@ -1,12 +1,14 @@
 package com.caovy2001.data_everywhere.service.user;
 
-import com.caovy2001.data_everywhere.command.user.CommandAPIUserLogIn;
-import com.caovy2001.data_everywhere.command.user.CommandAPIUserSignUp;
-import com.caovy2001.data_everywhere.command.user.CommandLoginFromThirdPartyResponse;
-import com.caovy2001.data_everywhere.command.user.CommandUpdateUserDetail;
+import com.caovy2001.data_everywhere.command.cart_item.CommandGetListCartItem;
+import com.caovy2001.data_everywhere.command.dataset_collection.CommandGetListDatasetCollection;
+import com.caovy2001.data_everywhere.command.user.*;
 import com.caovy2001.data_everywhere.constant.Constant;
 import com.caovy2001.data_everywhere.constant.ExceptionConstant;
+import com.caovy2001.data_everywhere.entity.CartItemEntity;
+import com.caovy2001.data_everywhere.entity.DatasetCollectionEntity;
 import com.caovy2001.data_everywhere.entity.UserEntity;
+import com.caovy2001.data_everywhere.model.pagination.Paginated;
 import com.caovy2001.data_everywhere.repository.UserRepository;
 import com.caovy2001.data_everywhere.service.BaseService;
 import com.caovy2001.data_everywhere.utils.JwtUtil;
@@ -14,13 +16,19 @@ import com.caovy2001.data_everywhere.utils.ParseObjectUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Component;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Slf4j
 @Component
@@ -33,6 +41,9 @@ public class UserService extends BaseService implements IUserService, IUserServi
 
     @Autowired
     private SimpMessagingTemplate simpMessagingTemplate;
+
+    @Autowired
+    private MongoTemplate mongoTemplate;
 
     @Override
     public UserEntity logIn(@NonNull CommandAPIUserLogIn command) throws Exception {
@@ -160,6 +171,43 @@ public class UserService extends BaseService implements IUserService, IUserServi
         }
 
         return false;
+    }
+
+    @Override
+    public List<UserEntity> getList(@NonNull CommandGetListUser command) {
+        Query query = this.buildQueryGetList(command);
+        if (query == null) {
+            return new ArrayList<>();
+        }
+
+        long total = mongoTemplate.count(query, UserEntity.class);
+        if (total == 0L) {
+            return new ArrayList<>();
+        }
+
+        List<UserEntity> userEntities = mongoTemplate.find(query, UserEntity.class);
+        return userEntities;
+    }
+
+    private Query buildQueryGetList(@NonNull CommandGetListUser command) {
+        Query query = new Query();
+        Criteria criteria = new Criteria();
+        List<Criteria> orCriteriaList = new ArrayList<>();
+        List<Criteria> andCriteriaList = new ArrayList<>();
+
+        if (StringUtils.isNotBlank(command.getId())) {
+            andCriteriaList.add(Criteria.where("id").is(command.getId()));
+        }
+
+        if (CollectionUtils.isNotEmpty(orCriteriaList)) {
+            criteria.orOperator(orCriteriaList);
+        }
+
+        if (CollectionUtils.isNotEmpty(andCriteriaList)) {
+            criteria.andOperator(andCriteriaList);
+        }
+        query.addCriteria(criteria);
+        return query;
     }
 }
 
