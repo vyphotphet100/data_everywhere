@@ -24,6 +24,10 @@ public class DatasetCategoryService extends BaseService implements IDatasetCateg
             throw new Exception("invalid_page_or_size");
         }
 
+        if (command.getSize() == 0) {
+            command.setSize(10);
+        }
+
         Query query = new Query();
         long total = mongoTemplate.count(query, DatasetCategoryEntity.class);
         if (total == 0) {
